@@ -1,0 +1,66 @@
+function run(canal) {
+
+                
+              if(canal != "0mn.io"){
+                var json = {
+                       "recipient_type": "individual",
+                       "type": "interactive",
+                       "interactive": {
+                         "type": "button",
+                         "body": {
+                         "text": "Sua solicitação foi atendida?"
+                          },
+                         "action": {
+                            "buttons": [
+                                     {
+                                "type": "reply",
+                                "reply": {
+                                "id": "ID 1.1",
+                                "title": "Sim"
+                                         }
+                                },
+                                {
+                               "type": "reply",
+                               "reply": {
+                               "id": "ID 1.2",
+                               "title": "Não"
+                                        }
+                                }
+		
+                              ]
+                            }
+                         }
+                     }                                                       
+                return json; 
+
+              }
+
+                var json = {
+                    "scope": "immediate",
+                    "text":"Sua solicitação foi atendida?",
+                    "options":[
+                                {
+                                 "text":"Sim"
+                                },
+                                {
+                                 "text":"Não"
+                                }
+                              ]
+                           } 
+                  return json; 
+            }
+
+           /* if(canal != "0mn.io")
+            {
+             var json = {
+             "type":"template",
+            "template":{
+            "namespace":"ec55c87d_1117_4b3b_bef3_027d16f9a0c1",
+            "name":"solicitacao_atendida",
+            "language":{
+            "code":"pt_BR",
+            "policy":"deterministic"
+               }
+       }
+}
+            }*/
